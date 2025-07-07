@@ -1,0 +1,127 @@
+#projects .projects__container,
+#all-projects .projects__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    #projects .projects__container,
+    #all-projects .projects__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    #projects .projects__container,
+    #all-projects .projects__container {
+        grid-template-columns: 100% ;
+    }
+}
+
+.view-more-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #222;
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.view-more-btn:hover {
+  background: #444;
+}
+
+.floating-home-btn {
+  transition: background 0.2s, color 0.2s;
+}
+.floating-home-btn:hover {
+  background: #444;
+  color: #ffd700;
+}
+
+.project-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.project-modal {
+  background: var(--color-ui-2, #fff);
+  border-radius: 1rem;
+  max-width: 700px;
+  min-width: 340px;
+  width: 90vw;
+  padding: 0;
+  box-shadow: var(--card-primary-shadow, 0 4px 32px rgba(0,0,0,0.18));
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.project-modal .modal-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 0;
+  background: var(--color-ui-2);
+}
+.project-modal .project__card-bottom {
+  padding: 2rem 2rem 1.5rem 2rem;
+}
+.project-modal h2 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+.project-modal .category {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+.project-modal .description {
+  font-size: 1rem;
+  margin: 1rem 0;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  display: block;
+}
+.project-modal .stacks {
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+.project-modal .stack {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background: rgba(var(--color-primary-rgb, 0,0,0), 0.3);
+  box-shadow: var(--card-primary-shadow, 0 2px 8px rgba(0,0,0,0.08));
+  clip-path: var(--polygon);
+  transition: var(--transition, 0.2s);
+  cursor: pointer;
+}
+.project-modal .stack img {
+  object-fit: contain;
+}
+@media (max-width: 900px) {
+  .project-modal {
+    max-width: 98vw;
+    min-width: 0;
+    padding: 0;
+  }
+  .project-modal .project__card-bottom {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .project-modal {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}

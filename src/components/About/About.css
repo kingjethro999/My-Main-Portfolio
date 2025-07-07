@@ -1,0 +1,86 @@
+#about {
+    position: relative;
+    margin-top: 60px;
+}
+#about .section__wrapper {
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 40px;
+    border-radius: 20px;
+    position: relative;
+    padding: 50px 20px;
+}
+#about .hole{
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+#about .column {
+    position: relative;
+}
+#about .right-column{
+    padding: 45px 0px;
+}
+#about .skill__title{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#about .skills__container{
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+#about .skill__group{
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+#about .skill{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 2px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    background: rgba(var(--color-primary-rgb),0.3);
+    box-shadow: var(--card-primary-shaddow);
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out, scale 0.4s ease-in-out; 
+}
+#about .skill:hover{
+    z-index: 1;
+    transform: rotate(0deg) scale(2);
+}
+#about .skill__logo {
+    width: 30px;
+    height: 30px;
+}
+#about .skill__logo > img {
+    object-fit: contain;
+}
+#about .card__ui-item{
+    max-width: 200px;
+    position: absolute;
+    bottom: -40px;
+    z-index: 0;
+}
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+    #about .section__wrapper {
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+    #about .left-column {
+        padding-top: 80px;
+    }
+    #about .right-column {
+        padding-top: 0px;
+        padding-bottom: 40px;
+    }
+}
