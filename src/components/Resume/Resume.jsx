@@ -1,14 +1,28 @@
 import React from "react";
-import { resume } from "../../data";
+import { resume, socialHandles, skills, projects } from "../../data";
 import { profile1 } from "../../assets";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import "./resume.css";
+
+const getRandomSkillLogos = () => {
+  // Flatten all skills and pick 5 random unique ones
+  const allSkills = skills.flatMap(cat => cat.data);
+  const shuffled = allSkills.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, 5).map(skill => skill.logo);
+};
 
 const Resume = () => {
   const { profile, keyProjects, techStack, experience, education, certifications } = resume;
+  const randomSkillLogos = getRandomSkillLogos();
+  const navigate = useNavigate();
+
+  const handleProjectClick = (index) => {
+    navigate("/projects", { state: { openProject: index } });
+  };
+
   return (
-    <section id="resume" style={{ minHeight: '100vh', background: 'var(--color-ui-1)', position: 'relative' }}>
-      <div className="section__wrapper resume-dashboard">
+    <section id="resume" className="resume-dashboard-section">
+      <div className="resume-dashboard">
         {/* Left: Profile Picture and Download */}
         <div className="resume-profile-card card">
           <img src={profile1} alt={profile.name} className="resume-profile-img" />
@@ -22,79 +36,110 @@ const Resume = () => {
           >
             Download My CV
           </a>
-          <div style={{ marginTop: '1.5rem', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 8px rgba(0,0,0,0.08)' }}>
-            <iframe
-              src="/resume.pdf"
-              title="Resume PDF"
-              width="100%"
-              height="180px"
-              style={{ border: 'none', display: 'block', borderRadius: 8 }}
-            />
+          {/* Social Handles */}
+          <div className="resume-socials" style={{ margin: '1.5rem 0 0.5rem 0', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+            {socialHandles.slice(0, 5).map((handle, i) => (
+              <a key={i} href={handle.link || '#'} target="_blank" rel="noopener noreferrer" title={handle.name} style={{ fontSize: 22, color: 'var(--color-muted)' }}>
+                {handle.icon}
+              </a>
+            ))}
+          </div>
+          {/* Skill Logos */}
+          <div className="flex__center stacks" style={{ margin: '1rem 0 0 0', gap: 10 }}>
+            {randomSkillLogos.map((logo, i) => (
+              <div className="stack" key={i} style={{ width: 30, height: 30, padding: 5, background: 'rgba(var(--color-primary-rgb), 0.3)', borderRadius: 8 }}>
+                <img src={logo} alt="skill" style={{ objectFit: 'contain', width: '100%', height: '100%' }} />
+              </div>
+            ))}
+          </div>
+          {/* Project Images Grid */}
+          <div className="resume-projects-grid" style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+            {projects.slice(0, 6).map((proj, idx) => (
+              <div key={idx} className="resume-project-thumb" style={{ cursor: 'pointer', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 8px rgba(0,0,0,0.08)' }} onClick={() => handleProjectClick(idx)}>
+                <img src={proj.image} alt={proj.title} style={{ width: '100%', height: 50, objectFit: 'cover', display: 'block' }} />
+              </div>
+            ))}
           </div>
         </div>
-        {/* Right: Resume Info */}
-        <div className="resume-info-card card">
-          <h2 className="shine" style={{ marginBottom: '1.5rem' }}>Resume</h2>
-          <p style={{ margin: '0 0 1.5rem 0' }}>{profile.summary}</p>
-          <div style={{ marginBottom: '2rem' }}>
-            <a href={`mailto:${profile.email}`} style={{ marginRight: 16 }}>Email</a>
-            <a href={profile.portfolio} target="_blank" rel="noopener noreferrer" style={{ marginRight: 16 }}>Portfolio</a>
-            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" style={{ marginRight: 16 }}>LinkedIn</a>
-            <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+        {/* Right: Resume Info (scrollable) */}
+        <div className="resume-info-card card resume-info-scrollable">
+          <h2 className="shine" style={{ marginBottom: '1.5rem', marginLeft: '1rem' }}>Resume</h2>
+          {/* Summary */}
+          <div style={{ marginBottom: '2rem', background: 'rgba(255,255,255,0.02)', padding: '1.2rem 1rem', borderRadius: 10 }}>
+            <h3 style={{ margin: 0, fontWeight: 700, fontSize: '1.1rem', color: 'var(--color-primary)' }}>Profile Summary</h3>
+            <p style={{ margin: '0.5rem 0 0 0', color: '#ccc' }}>{profile.summary}</p>
           </div>
-          <h3>Key Projects</h3>
-          <ul style={{ paddingLeft: 20, marginBottom: '2rem' }}>
+          {/* Contact Links */}
+          <div style={{ marginBottom: '2.5rem', display: 'flex', flexWrap: 'wrap', gap: '1.2rem', alignItems: 'center' }}>
+            <a href={`mailto:${profile.email}`} className="resume-link-btn">Email</a>
+            <a href={profile.portfolio} target="_blank" rel="noopener noreferrer" className="resume-link-btn">Portfolio</a>
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="resume-link-btn">LinkedIn</a>
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="resume-link-btn">GitHub</a>
+          </div>
+          {/* Key Projects */}
+          <div className="resume-section">
+            <h3 className="resume-section-title">Key Projects</h3>
             {keyProjects.map((proj, i) => (
-              <li key={i} style={{ marginBottom: '1.2rem' }}>
-                <strong>{proj.title}</strong> <span className="text__muted">({proj.role})</span><br />
-                <span style={{ color: '#bbb' }}>{proj.tech}</span><br />
-                <span>{proj.outcome}</span><br />
-                {proj.links && proj.links.map((l, j) => (
-                  <a key={j} href={l.url} target="_blank" rel="noopener noreferrer" style={{ marginRight: 12 }}>{l.text}</a>
-                ))}
-              </li>
+              <div key={i} className="resume-project-card">
+                <div style={{ fontWeight: 600, color: 'var(--color-primary)' }}>{proj.title} <span className="text__muted" style={{ fontWeight: 400 }}>({proj.role})</span></div>
+                <div style={{ color: '#bbb', fontSize: '0.98em', marginBottom: 2 }}>{proj.tech}</div>
+                <div style={{ margin: '0.5rem 0 0.5rem 0' }}>{proj.outcome}</div>
+                <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                  {proj.links && proj.links.map((l, j) => (
+                    <a key={j} href={l.url} target="_blank" rel="noopener noreferrer" className="resume-link-btn" style={{ fontSize: '0.95em' }}>{l.text}</a>
+                  ))}
+                </div>
+              </div>
             ))}
-          </ul>
-          <h3>Tech Stack</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', marginBottom: '2rem' }}>
-            {Object.entries(techStack).map(([cat, items], i) => (
-              <div key={i} style={{ minWidth: 180 }}>
-                <strong>{cat}</strong>
-                <ul style={{ paddingLeft: 18, margin: 0 }}>
-                  {items.map((item, j) => <li key={j}>{item}</li>)}
+          </div>
+          {/* Tech Stack */}
+          <div className="resume-section">
+            <h3 className="resume-section-title">Tech Stack</h3>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', marginBottom: '1rem' }}>
+              {Object.entries(techStack).map(([cat, items], i) => (
+                <div key={i} style={{ minWidth: 180 }}>
+                  <div style={{ fontWeight: 600, color: 'var(--color-primary)', marginBottom: 4 }}>{cat}</div>
+                  <ul style={{ paddingLeft: 18, margin: 0, color: '#ccc', fontSize: '0.98em' }}>
+                    {items.map((item, j) => <li key={j}>{item}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Experience */}
+          <div className="resume-section">
+            <h3 className="resume-section-title">Experience</h3>
+            {experience.map((exp, i) => (
+              <div key={i} className="resume-exp-card">
+                <div style={{ fontWeight: 600, color: 'var(--color-primary)' }}>{exp.title} <span className="text__muted" style={{ fontWeight: 400 }}>@ {exp.company}</span></div>
+                <div style={{ color: '#bbb', fontSize: '0.98em', marginBottom: 2 }}>{exp.time} &middot; {exp.employment}</div>
+                <ul style={{ paddingLeft: 18, margin: 0, color: '#ccc', fontSize: '0.98em' }}>
+                  {exp.results.map((r, j) => <li key={j}>{r}</li>)}
                 </ul>
               </div>
             ))}
           </div>
-          <h3>Experience</h3>
-          <ul style={{ paddingLeft: 20, marginBottom: '2rem' }}>
-            {experience.map((exp, i) => (
-              <li key={i} style={{ marginBottom: '1.2rem' }}>
-                <strong>{exp.title}</strong> <span className="text__muted">@ {exp.company}</span><br />
-                <span style={{ color: '#bbb' }}>{exp.time} &middot; {exp.employment}</span>
-                <ul style={{ paddingLeft: 18, margin: 0 }}>
-                  {exp.results.map((r, j) => <li key={j}>{r}</li>)}
-                </ul>
-              </li>
-            ))}
-          </ul>
-          <h3>Education</h3>
-          <ul style={{ paddingLeft: 20, marginBottom: '2rem' }}>
+          {/* Education */}
+          <div className="resume-section">
+            <h3 className="resume-section-title">Education</h3>
             {education.map((edu, i) => (
-              <li key={i}>
-                <strong>{edu.school}</strong> <span className="text__muted">({edu.year})</span><br />
-                {edu.degree} <span style={{ color: '#bbb' }}>{edu.focus}</span>
-              </li>
+              <div key={i} className="resume-edu-card">
+                <div style={{ fontWeight: 600, color: 'var(--color-primary)' }}>{edu.school} <span className="text__muted" style={{ fontWeight: 400 }}>({edu.year})</span></div>
+                <div style={{ color: '#bbb', fontSize: '0.98em' }}>{edu.degree} <span style={{ color: '#ccc' }}>{edu.focus}</span></div>
+              </div>
             ))}
-          </ul>
-          <h3>Certifications</h3>
-          <ul style={{ paddingLeft: 20 }}>
-            {certifications.map((cert, i) => (
-              <li key={i}>
-                <strong>{cert.cert}</strong> <span className="text__muted">({cert.year})</span> - {cert.status}
-              </li>
-            ))}
-          </ul>
+          </div>
+          {/* Certifications */}
+          <div className="resume-section">
+            <h3 className="resume-section-title">Certifications</h3>
+            <ul style={{ paddingLeft: 20, color: '#ccc', fontSize: '0.98em' }}>
+              {certifications.map((cert, i) => (
+                <li key={i}>
+                  <strong>{cert.cert}</strong> <span className="text__muted">({cert.year})</span> - {cert.status}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
       <RouterLink to="/" className="floating-home-btn" title="Return Home">
