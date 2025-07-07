@@ -75,6 +75,7 @@ export const menu = [
   { name: "About" },
   { name: "Services" },
   { name: "Skills" },
+  { name: "Resume" },
   { name: "Projects" },
   { name: "Contact" },
 ];
@@ -180,7 +181,7 @@ export const projects = [
       { name: "MySQL", logo: mysql },
       { name: "Tailwind CSS", logo: tailwind },
     ],
-  },  
+  },
   {
     title: "HandyMan (WIP)",
     image: project7,
@@ -227,7 +228,7 @@ export const projects = [
       { name: "PHP", logo: php },
       { name: "MySQL", logo: mysql },
     ],
-  },  
+  },
   {
     title: "Instagram Automation Bot",
     image: project11,
@@ -238,7 +239,7 @@ export const projects = [
       { name: "Python", logo: python },
       { name: "Selenium", logo: selenium },
     ],
-  },  
+  },
   {
     title: "Currency Converter",
     image: project12,
@@ -249,7 +250,7 @@ export const projects = [
       { name: "EJS", logo: ejs },
       { name: "Node.js", logo: nodejs },
     ],
-  },  
+  },
   {
     title: "Semester 2 Quiz App",
     image: project13,
@@ -270,7 +271,7 @@ export const projects = [
     stacks: [
       { name: "Figma", logo: figma },
     ],
-  },  
+  },
   {
     title: "Text to SVG Generator",
     image: project15, //you can ask me to generate a 1:1 image too
@@ -283,7 +284,7 @@ export const projects = [
       { name: "CSS", logo: css },
     ],
   },
-  
+
 ];
 
 export const skills = [
@@ -557,3 +558,163 @@ export const testimonials = [
            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`,
   },
 ];
+
+export const resume = {
+  profile: {
+    name: "Jethro Oluwaseun Jerry",
+    title: "Software Engineer",
+    location: "Federal Capital Territory, Nigeria · Remote",
+    email: "jethrojerrybj@gmail.com",
+    portfolio: "https://jethroportfolio.vercel.app",
+    linkedin: "https://www.linkedin.com/in/king-jethro-jerry/",
+    github: "https://www.github.com/kingjethro999/",
+    summary: `Software Engineer with 3+ years architecting enterprise applications in JavaScript/TypeScript and PHP (Laravel) ecosystems. Led development of applications serving 10,000+ users, achieving 98% code coverage and 95+ Lighthouse scores while reducing system latency by 40%, and established CI/CD pipelines with comprehensive testing across 15+ production deployments.`,
+  },
+  keyProjects: [
+    {
+      title: "Ignite DSL",
+      role: "Lead JavaScript/TypeScript Developer",
+      tech: "TypeScript",
+      outcome: "Architected a domain-specific language (DSL) for React Native using .ignite files and folder-based routing (inspired by Next.js), resulting in a 67% increase in developer productivity through simplified code structure and automated navigation.",
+      links: [
+        { text: "View Project", url: "https://ignitedocs.vercel.app/" }
+      ]
+    },
+    {
+      title: "Aquilla Blog",
+      role: "Lead Full-Stack Developer",
+      tech: "Next Js, CSS, Node Js, MongoDB, Mail SMTP, PHP, MySQL",
+      outcome: "Created a tech community platform enabling users to share knowledge, collaborate on projects, and engage in discussions. Implemented scalable architecture with Next.js and MongoDB, supporting 100+ active members with 98% uptime and robust content management features.",
+      links: [
+        { text: "Live Preview", url: "https://aquillablog.vercel.app" },
+        { text: "View Project", url: "https://github.com/kingjethro999/aquillablog" }
+      ]
+    }
+  ],
+  techStack: {
+    "Core Engineering": [
+      "TypeScript/JavaScript",
+      "MERN Stack (MongoDB, Express, React, Node.js)",
+      "System Design & Architecture",
+      "PHP/Laravel",
+      "Java",
+      "C++/C#"
+    ],
+    "Frontend & Mobile": [
+      "React/Next.js",
+      "React Native",
+      "Angular",
+      "Vue.js",
+      "Redux/Zustand",
+      "HTML5/CSS3",
+      "Bootstrap/Tailwind CSS",
+      "UI/UX Implementation"
+    ],
+    "Backend & Data": [
+      "REST/GraphQL APIs",
+      "Microservices Architecture",
+      "MySQL/PostgreSQL",
+      "MongoDB/Redis",
+      "WebSockets",
+      "XAMPP/LAMP Stack"
+    ],
+    "DevOps & Quality": [
+      "AWS/Cloud Services",
+      "Docker/Kubernetes",
+      "CI/CD Pipelines",
+      "Git/GitHub",
+      "Jest/Cypress",
+      "Figma/Adobe XD"
+    ]
+  },
+  experience: [
+    {
+      title: "React Native Developer (The HandyMan Project)",
+      company: "THE BEST (Startup)",
+      time: "2025 – Present",
+      employment: "Remote, Full-Time",
+      results: [
+        "Developed and launched The HandyMan, a cross-platform mobile application using React Native, TypeScript, and Redux for seamless service booking and real-time notifications.",
+        "Integrated RESTful APIs, push notifications, and secure authentication to enhance user experience and engagement.",
+        "Implemented scalable architecture and reusable UI components, ensuring maintainability and rapid feature delivery.",
+        "Utilized ATS-friendly technologies: React Native, TypeScript, Redux, REST APIs, Firebase, and Expo."
+      ]
+    },
+    {
+      title: "Founder & Tech Lead",
+      company: "THE BEST (Startup)",
+      time: "2025 – Present",
+      employment: "Remote, Full-Time",
+      results: [
+        "Founded and set the strategic vision for a tech startup, driving innovation in AI, web, and mobile development.",
+        "Led cross-functional teams using agile methodologies to deliver high-impact projects, including a React Native DSL and a tech community platform.",
+        "Oversaw technical innovation, resource allocation, and stakeholder communication to scale and grow the startup successfully."
+      ]
+    },
+    {
+      title: "Lead JavaScript/TypeScript Developer",
+      company: "Ignite DSL Project",
+      time: "2024 – Present",
+      employment: "Remote, Contract",
+      results: [
+        "Architected a domain-specific language (DSL) for React Native using .ignite files and folder-based routing (inspired by Next.js), resulting in a 67% increase in developer productivity.",
+        "Developed a custom transpiler to convert DSL code into production-ready React Native applications, streamlining the development process for mobile teams."
+      ]
+    },
+    {
+      title: "Lead Full-Stack Developer",
+      company: "Aquilla Blog",
+      time: "2024 – Present",
+      employment: "Remote, Contract",
+      results: [
+        "Created a tech community platform enabling users to share knowledge, collaborate on projects, and engage in discussions.",
+        "Implemented scalable architecture with Next.js and MongoDB, supporting 100+ active members with 98% uptime and robust content management features."
+      ]
+    },
+    {
+      title: "Senior PHP Developer & Scrum Leader",
+      company: "Lincoln College of Science Management and Technology",
+      time: "2024 – 2025",
+      employment: "Azatha Abuja, Full-Time",
+      results: [
+        "Led the scrum team for the School Ecosystem Project, orchestrating agile sprints and coordinating cross-functional tasks.",
+        "Engineered a responsive user interface with TailwindCSS and Bootstrap, and developed dynamic features with JavaScript and PHP."
+      ]
+    },
+    {
+      title: "Web Developer",
+      company: "IceWebDezignz",
+      time: "2021",
+      employment: "Kurudu Abuja, Full-Time",
+      results: [
+        "Developed and customized WordPress websites tailored to client specifications, ensuring optimal performance across devices.",
+        "Integrated essential plugins, maintained security, and collaborated with design/content teams for engaging user experiences."
+      ]
+    }
+  ],
+  education: [
+    {
+      school: "Lincoln University College, Nigeria",
+      degree: "Diploma in Computer Software Engineering",
+      year: "2023 – Present",
+      focus: "Software Architecture & Cloud Computing"
+    }
+  ],
+  certifications: [
+    {
+      cert: "Professional Scrum Master I (PSM I)",
+      year: "2024",
+      status: "Completed"
+    },
+    {
+      cert: "CMS Development with WordPress",
+      year: "2021",
+      status: "Completed"
+    },
+    {
+      cert: "SEO Optimization Fundamentals",
+      year: "2021",
+      status: "Completed"
+    }
+  ]
+};

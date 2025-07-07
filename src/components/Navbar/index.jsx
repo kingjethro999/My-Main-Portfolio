@@ -4,6 +4,7 @@ import Logo from "../../assets/Logo"
 import { FaTimes } from 'react-icons/fa'
 import { menu } from '../../data'
 import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link as RouterLink } from 'react-router-dom'
 import { FaArrowUpRightFromSquare, FaBarsStaggered } from 'react-icons/fa6'
 
 const Navbar = () => {
@@ -30,20 +31,33 @@ const Navbar = () => {
         </div>
         <div className="flex sidebar__middle">
           {
-            menu.map((list, index) => (
-              <Link
-                to={list.name.toLocaleLowerCase()}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                key={index}
-                className='tab'
-                activeClass='btn__shine'
-              >
-                {list.name}
-              </Link>
-            ))
+            menu.map((list, index) =>
+              list.name === "Resume" ? (
+                <RouterLink
+                  to="/resume"
+                  key={index}
+                  className="tab"
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => setShowSidebar(false)}
+                >
+                  {list.name}
+                </RouterLink>
+              ) : (
+                <Link
+                  to={list.name.toLocaleLowerCase()}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  key={index}
+                  className='tab'
+                  activeClass='btn__shine'
+                  onClick={() => setShowSidebar(false)}
+                >
+                  {list.name}
+                </Link>
+              )
+            )
           }
         </div>
       </aside>
