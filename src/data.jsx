@@ -148,16 +148,6 @@ export const projects = [
     ],
   },
   {
-    title: "FireUp PHP Framework",
-    image: project4,
-    category: "Framework",
-    description: `A lightweight PHP framework built from scratch to simplify backend development. Ideal for beginners and pros seeking speed, structure, and clarity.`,
-    demoLink: "https://github.com/kingjethro999/FireUp-Php-Framework",
-    stacks: [
-      { name: "PHP", logo: php },
-    ],
-  },
-  {
     title: "AI Chatbot",
     image: project5,
     category: "AI Interface",
