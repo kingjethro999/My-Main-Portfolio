@@ -23,7 +23,7 @@ const Footer = () => {
         </ul>
         <SocialHandles />
         <div className="copyright">
-          <h3>Copyright &copy; All right reserved - | <script>document.write(new Date().getFullYear())</script></h3>
+          <h3>Copyright &copy; All right reserved - | {new Date().getFullYear()}</h3>
           <p className="text__muted">Built with love by King Jethro</p>
         </div>
         <div className="base__logo">
