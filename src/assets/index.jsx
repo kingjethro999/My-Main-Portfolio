@@ -21,6 +21,9 @@ export { default as project12 } from "./project12.png";
 export { default as project13 } from "./project13.png";
 export { default as project14 } from "./project14.png";
 export { default as project15 } from "./project15.png";
+export { default as project16 } from "./vex-logo.svg";
+export { default as project17 } from "./dev-space.png";
+export { default as project18 } from "./swiftai.png";
 
 //Icons export
 export { default as figma } from "./icons/figma.svg";
@@ -70,3 +73,4 @@ export { default as expo } from "./icons/expo.svg";
 export { default as gemini } from "./icons/gemini.svg";
 export { default as selenium } from "./icons/selenium.svg";
 export { default as supabase } from "./icons/supabase.svg";
+export { default as stripe } from "./icons/stripe.png";

@@ -22,6 +22,9 @@ import {
   project13,
   project14,
   project15,
+  project16,
+  project17,
+  project18,
   profile3,
   profile4,
   profile5,
@@ -110,6 +113,20 @@ export const services = [
 
 export const projects = [
   {
+    title: "Dev Space",
+    image: project17,
+    category: "Community Platform",
+    description: `A comprehensive developer community platform that unifies project management, discussions, and real-time messaging. Features authentication, live updates, and an admin suite.`,
+    demoLink: "https://the-dev-space.vercel.app/",
+    stacks: [
+      { name: "Next.js", logo: nextjs },
+      { name: "React", logo: react },
+      { name: "TypeScript", logo: ts },
+      { name: "Tailwind CSS", logo: tailwind },
+      { name: "Firebase", logo: firebase },
+    ],
+  },
+  {
     title: "Ignite",
     image: project1,
     category: "Developer Tool",
@@ -123,15 +140,31 @@ export const projects = [
     ],
   },
   {
-    title: "Vibe Flow",
-    image: project2,
-    category: "Mobile App",
-    description: `A real-time social media app built with React Native and Supabase. Vibe Flow lets users create posts, like, and comment in a modern mobile-first experience.`,
-    demoLink: "https://vibe-flow-launch.vercel.app/",
+    title: "Vex - Anonymous Content Platform",
+    image: project16,
+    category: "Web Platform",
+    description: `A modern, enterprise-grade anonymous posting platform that allows users to freely share text, media, files, and audio without any registration or authentication. Built with Next.js, Supabase, and Cloudinary.`,
+    demoLink: "https://vex-anonymous.vercel.app/",
     stacks: [
-      { name: "React Native", logo: react },
+      { name: "Next.js", logo: nextjs },
+      { name: "React", logo: react },
+      { name: "TypeScript", logo: ts },
+      { name: "Tailwind CSS", logo: tailwind },
       { name: "Supabase", logo: supabase },
-      { name: "Expo", logo: expo },
+    ],
+  },
+  {
+    title: "Swift AI Recruit",
+    image: project18,
+    category: "AI Platform",
+    description: `An advanced AI-powered recruitment platform with smart matching, AI tools for applicants/employers/recruiters, ATS Kanban board, and role-based dashboards. Powered by Google Gemini.`,
+    demoLink: "https://swift-ai-recruit.vercel.app/",
+    stacks: [
+      { name: "Next.js", logo: nextjs },
+      { name: "TypeScript", logo: ts },
+      { name: "Tailwind CSS", logo: tailwind },
+      { name: "Supabase", logo: supabase },
+      { name: "Gemini API", logo: gemini },
     ],
   },
   {
@@ -145,6 +178,18 @@ export const projects = [
       { name: "MongoDB", logo: mongodb },
       { name: "PHP", logo: php },
       { name: "MySQL", logo: mysql },
+    ],
+  },
+  {
+    title: "Vibe Flow",
+    image: project2,
+    category: "Mobile App",
+    description: `A real-time social media app built with React Native and Supabase. Vibe Flow lets users create posts, like, and comment in a modern mobile-first experience.`,
+    demoLink: "https://vibe-flow-launch.vercel.app/",
+    stacks: [
+      { name: "React Native", logo: react },
+      { name: "Supabase", logo: supabase },
+      { name: "Expo", logo: expo },
     ],
   },
   {
