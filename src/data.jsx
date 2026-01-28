@@ -483,12 +483,12 @@ export const skills = [
     data: [
       {
         skill: "DeepSeek",
-        level: "Intermediate",
+        level: "Experienced",
         logo: deepseek,
       },
       {
         skill: "Gemini",
-        level: "Intermediate",
+        level: "Experienced",
         logo: gemini,
       },
       {
