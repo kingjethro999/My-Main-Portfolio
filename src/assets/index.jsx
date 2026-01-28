@@ -24,6 +24,7 @@ export { default as project15 } from "./project15.png";
 export { default as project16 } from "./vex-logo.svg";
 export { default as project17 } from "./dev-space.png";
 export { default as project18 } from "./swiftai.png";
+export { default as project19 } from "./vox-talent.png";
 
 //Icons export
 export { default as figma } from "./icons/figma.svg";

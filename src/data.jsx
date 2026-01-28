@@ -25,6 +25,7 @@ import {
   project16,
   project17,
   project18,
+  project19,
   profile3,
   profile4,
   profile5,
@@ -124,6 +125,20 @@ export const projects = [
       { name: "TypeScript", logo: ts },
       { name: "Tailwind CSS", logo: tailwind },
       { name: "Firebase", logo: firebase },
+    ],
+  },
+  {
+    title: "VoxTalent",
+    image: project19,
+    category: "AI Resume & Interview",
+    description: `A voice-first resume builder and interview preparation platform. Builds ATS-optimized resumes via natural conversation and simulates interviews with real-time AI feedback.`,
+    demoLink: "https://vox-talent.vercel.app/",
+    stacks: [
+      { name: "Next.js", logo: nextjs },
+      { name: "React", logo: react },
+      { name: "Tailwind CSS", logo: tailwind },
+      { name: "Gemini API", logo: gemini },
+      { name: "ElevenLabs", logo: audio },
     ],
   },
   {
