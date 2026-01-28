@@ -618,7 +618,7 @@ export const resume = {
     portfolio: "https://jethroportfolio.vercel.app",
     linkedin: "https://www.linkedin.com/in/king-jethro-jerry/",
     github: "https://www.github.com/kingjethro999/",
-    summary: `Software Engineer with 3+ years architecting enterprise applications in JavaScript/TypeScript and PHP (Laravel) ecosystems. Led development of applications serving 10,000+ users, achieving 98% code coverage and 95+ Lighthouse scores while reducing system latency by 40%, and established CI/CD pipelines with comprehensive testing across 15+ production deployments.`,
+    summary: `Software Engineer with 4+ years architecting enterprise applications in JavaScript/TypeScript and PHP (Laravel) ecosystems. Led development of applications serving 10,000+ users, achieving 98% code coverage and 95+ Lighthouse scores while reducing system latency by 40%, and established CI/CD pipelines with comprehensive testing across 15+ production deployments.`,
   },
   keyProjects: [
     {
