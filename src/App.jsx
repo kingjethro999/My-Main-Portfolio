@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import About from "./components/About";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
@@ -7,8 +8,9 @@ import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import AllProjects from "./components/Projects/AllProjects";
-import Resume from "./components/Resume/Resume";
+
+const AllProjects = lazy(() => import("./components/Projects/AllProjects"));
+const Resume = lazy(() => import("./components/Resume/Resume"));
 
 const Home = () => (
   <>
@@ -23,14 +25,33 @@ const Home = () => (
   </>
 );
 
+import "./skeleton.css";
+
+const Loader = () => (
+  <div className="skeleton-container">
+    <div className="skeleton-block skeleton-header"></div>
+    <div className="skeleton-block skeleton-title"></div>
+    <div className="skeleton-grid">
+      <div className="skeleton-block skeleton-card"></div>
+      <div className="skeleton-block skeleton-card"></div>
+      <div className="skeleton-block skeleton-card"></div>
+      <div className="skeleton-block skeleton-card"></div>
+      <div className="skeleton-block skeleton-card"></div>
+      <div className="skeleton-block skeleton-card"></div>
+    </div>
+  </div>
+);
+
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<AllProjects />} />
-        <Route path="/resume" element={<Resume />} />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<AllProjects />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 };

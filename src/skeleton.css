@@ -1,0 +1,43 @@
+/* Skeleton Loader */
+@keyframes skeleton-pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+.skeleton-container {
+  padding: 80px 20px;
+  max-width: 1190px;
+  margin: auto;
+  width: 100%;
+}
+
+.skeleton-block {
+  background: var(--color-ui-2);
+  border-radius: var(--border-radius-3);
+  animation: skeleton-pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-header {
+  height: 80px;
+  width: 100%;
+  margin-bottom: 40px;
+  border-radius: var(--border-radius-5);
+}
+
+.skeleton-title {
+  height: 40px;
+  width: 30%;
+  margin: 0 auto 60px;
+}
+
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skeleton-card {
+  height: 350px;
+  width: 100%;
+}
