@@ -26,6 +26,7 @@ import {
   project17,
   project18,
   project19,
+  project20,
   profile3,
   profile4,
   profile5,
@@ -128,6 +129,16 @@ export const projects = [
     ],
   },
   {
+    title: "Campor",
+    image: project20,
+    category: "UI/UX",
+    description: `Designed the complete UI/UX for Campor, a school marketplace platform connecting vendors and buyers. Produced the entire system flow and interface design in Figma, covering all core user journeys from discovery to transaction.`,
+    demoLink: "https://www.figma.com/design/kqqpKGnv4EMxY9Ys2EEjnr/Campor?node-id=0-1&t=TuXZizbzfGJ5Ghnc-0",
+    stacks: [
+      { name: "Figma", logo: figma },
+    ],
+  },
+  {
     title: "VoxTalent",
     image: project19,
     category: "AI Resume & Interview",
@@ -139,6 +150,20 @@ export const projects = [
       { name: "Tailwind CSS", logo: tailwind },
       { name: "Gemini API", logo: gemini },
       { name: "ElevenLabs", logo: audio },
+    ],
+  },
+  {
+    title: "Swift AI Recruit",
+    image: project18,
+    category: "AI Platform",
+    description: `An advanced AI-powered recruitment platform with smart matching, AI tools for applicants/employers/recruiters, ATS Kanban board, and role-based dashboards. Powered by Google Gemini.`,
+    demoLink: "https://swift-ai-recruit.vercel.app/",
+    stacks: [
+      { name: "Next.js", logo: nextjs },
+      { name: "TypeScript", logo: ts },
+      { name: "Tailwind CSS", logo: tailwind },
+      { name: "Supabase", logo: supabase },
+      { name: "Gemini API", logo: gemini },
     ],
   },
   {
@@ -166,20 +191,6 @@ export const projects = [
       { name: "TypeScript", logo: ts },
       { name: "Tailwind CSS", logo: tailwind },
       { name: "Supabase", logo: supabase },
-    ],
-  },
-  {
-    title: "Swift AI Recruit",
-    image: project18,
-    category: "AI Platform",
-    description: `An advanced AI-powered recruitment platform with smart matching, AI tools for applicants/employers/recruiters, ATS Kanban board, and role-based dashboards. Powered by Google Gemini.`,
-    demoLink: "https://swift-ai-recruit.vercel.app/",
-    stacks: [
-      { name: "Next.js", logo: nextjs },
-      { name: "TypeScript", logo: ts },
-      { name: "Tailwind CSS", logo: tailwind },
-      { name: "Supabase", logo: supabase },
-      { name: "Gemini API", logo: gemini },
     ],
   },
   {
@@ -334,6 +345,7 @@ export const projects = [
       { name: "CSS", logo: css },
     ],
   },
+  
 
 ];
 
