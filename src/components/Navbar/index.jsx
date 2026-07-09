@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import "./Navbar.css"
 import Logo from "../../assets/Logo"
 import { FaTimes } from 'react-icons/fa'
