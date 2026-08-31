@@ -115,7 +115,7 @@ export const services = [
 export const projects = [
   {
     title: "Dev Space",
-    image: project17,
+    image: "https://jethroportfolio.vercel.app/assets/dev-space-D0Rc1r0U.png",
     category: "Community Platform",
     description: `A comprehensive developer community platform that unifies project management, discussions, and real-time messaging. Features authentication, live updates, and an admin suite.`,
     demoLink: "https://the-dev-space.vercel.app/",
@@ -129,7 +129,7 @@ export const projects = [
   },
   {
     title: "VoxTalent",
-    image: project19,
+    image: "https://jethroportfolio.vercel.app/assets/vox-talent-BPFpfzuQ.png",
     category: "AI Resume & Interview",
     description: `A voice-first resume builder and interview preparation platform. Builds ATS-optimized resumes via natural conversation and simulates interviews with real-time AI feedback.`,
     demoLink: "https://vox-talent.vercel.app/",
@@ -143,7 +143,7 @@ export const projects = [
   },
   {
     title: "Ignite",
-    image: project1,
+    image: https://jethroportfolio.vercel.app/assets/project1-BYQg25yD.png,
     category: "Developer Tool",
     description: `A TypeScript-based framework that accelerates mobile app development with React Native. Ignite includes boilerplates, built-in utilities, and seamless navigation setup to help developers ship faster.`,
     demoLink: "https://ignitedocs.vercel.app/",
@@ -156,7 +156,7 @@ export const projects = [
   },
   {
     title: "Vex - Anonymous Content Platform",
-    image: project16,
+    image: "data:image/svg+xml,%3csvg%20width='512'%20height='512'%20viewBox='0%200%20100%20100'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3clinearGradient%20id='vexGradient'%20x1='0%25'%20y1='0%25'%20x2='100%25'%20y2='100%25'%3e%3cstop%20offset='0%25'%20stop-color='%2310b981'%20/%3e%3cstop%20offset='100%25'%20stop-color='%2306b6d4'%20/%3e%3c/linearGradient%3e%3cfilter%20id='shadow'%20x='-20%25'%20y='-20%25'%20width='140%25'%20height='140%25'%3e%3cfeDropShadow%20dx='0'%20dy='4'%20stdDeviation='3'%20flood-opacity='0.3'/%3e%3c/filter%3e%3c/defs%3e%3cpath%20d='M20%2015%20L45%2070%20L50%2060%20L70%2015%20L60%2015%20L50%2045%20L40%2015%20Z'%20fill='url(%23vexGradient)'%20filter='url(%23shadow)'%20/%3e%3ccircle%20cx='50'%20cy='75'%20r='8'%20fill='url(%23vexGradient)'%20opacity='0.6'%20/%3e%3ccircle%20cx='30'%20cy='20'%20r='3'%20fill='%2310b981'%20opacity='0.4'%20/%3e%3ccircle%20cx='70'%20cy='20'%20r='3'%20fill='%2306b6d4'%20opacity='0.4'%20/%3e%3c/svg%3e",
     category: "Web Platform",
     description: `A modern, enterprise-grade anonymous posting platform that allows users to freely share text, media, files, and audio without any registration or authentication. Built with Next.js, Supabase, and Cloudinary.`,
     demoLink: "https://vex-anonymous.vercel.app/",
@@ -170,7 +170,7 @@ export const projects = [
   },
   {
     title: "Swift AI Recruit",
-    image: project18,
+    image: "https://jethroportfolio.vercel.app/assets/swiftai-BEVeZnya.png",
     category: "AI Platform",
     description: `An advanced AI-powered recruitment platform with smart matching, AI tools for applicants/employers/recruiters, ATS Kanban board, and role-based dashboards. Powered by Google Gemini.`,
     demoLink: "https://swift-ai-recruit.vercel.app/",
@@ -184,7 +184,7 @@ export const projects = [
   },
   {
     title: "Aquilla Blog",
-    image: project3,
+    image: "https://res.cloudinary.com/dcrh78d8z/image/upload/v1746136748/IMG-20250406-WA0005-removebg-preview_1_topb5z.png",
     category: "Web Platform",
     description: `A centralized blog platform for the Aquilla Cyber Tech community. Powered by MongoDB and managed with a custom PHP/MySQL backend, it supports secure content publishing, user engagement, and email notifications.`,
     demoLink: "https://aquillablog.vercel.app/",
@@ -197,7 +197,7 @@ export const projects = [
   },
   {
     title: "Vibe Flow",
-    image: project2,
+    image: https://jethroportfolio.vercel.app/assets/project2-wyLbzOjA.png,
     category: "Mobile App",
     description: `A real-time social media app built with React Native and Supabase. Vibe Flow lets users create posts, like, and comment in a modern mobile-first experience.`,
     demoLink: "https://vibe-flow-launch.vercel.app/",
@@ -209,7 +209,7 @@ export const projects = [
   },
   {
     title: "AI Chatbot",
-    image: project5,
+    image: https://jethroportfolio.vercel.app/assets/project5-Clg4Cz6H.png,
     category: "AI Interface",
     description: `A modern chatbot interface using Next.js and DeepSeek API. It handles user prompts and responds intelligently via a styled frontend backed with PHP-MySQL user logging.`,
     demoLink: "https://best-gold.vercel.app/",
@@ -222,7 +222,7 @@ export const projects = [
   },
   {
     title: "School Management System",
-    image: project6,
+    image: https://jethroportfolio.vercel.app/assets/project6-C-Kst6kb.png,
     category: "Web App",
     description: `A platform for managing school communication and student activities. Built with PHP and styled with Tailwind CSS to streamline academic coordination.`,
     demoLink: "https://pageland-three.vercel.app/",
@@ -234,7 +234,7 @@ export const projects = [
   },
   {
     title: "HandyMan (WIP)",
-    image: project7,
+    image: https://jethroportfolio.vercel.app/assets/project7-Cd5jnyvr.png,
     category: "Mobile App",
     description: `HandyMan bridges the gap between homeowners and skilled professionals. Whether plumbing, wiring, or furniture assembly, users can find nearby experts instantly. Currently in development.`,
     demoLink: "#",
@@ -246,7 +246,7 @@ export const projects = [
   },
   {
     title: "Desk Buddy (Prototype)",
-    image: project8,
+    image: https://jethroportfolio.vercel.app/assets/project8-BtvgzuD2.png,
     category: "AI Desktop Assistant",
     description: `A prototype of an AI-powered desktop assistant using Python, Gemini API, speech recognition and TTS. It responds to voice, opens apps, and interacts with the user in real time.`,
     demoLink: "#",
@@ -258,7 +258,7 @@ export const projects = [
   },
   {
     title: "Figma MCP",
-    image: project9,
+    image: https://jethroportfolio.vercel.app/assets/project9-D6tX9hwA.png,
     category: "Dev Tool",
     description: `A bridge between Figma and VSCode Copilot. Converts design elements into ready-to-use code components. Built to streamline design-to-development workflow.`,
     demoLink: "https://github.com/kingjethro999/figma-mcp",
@@ -270,7 +270,7 @@ export const projects = [
   },
   {
     title: "Spark",
-    image: project10,
+    image: https://jethroportfolio.vercel.app/assets/project10-D6V4DS9M.png,
     category: "Web App",
     description: `A YouTube-style video sharing platform built with PHP and MySQL. Users can upload, view, and interact with video content. Currently in development.`,
     demoLink: "https://github.com/kingjethro999/spark",
@@ -281,7 +281,7 @@ export const projects = [
   },
   {
     title: "Instagram Automation Bot",
-    image: project11,
+    image: https://jethroportfolio.vercel.app/assets/project11-Bw1SngpT.png,
     category: "Python Script",
     description: `A Python automation tool for scheduling and auto-posting content to Instagram. Useful for creators looking to automate their daily workflow.`,
     demoLink: "https://github.com/kingjethro999/iinstagrambot",
@@ -292,7 +292,7 @@ export const projects = [
   },
   {
     title: "Currency Converter",
-    image: project12,
+    image: https://jethroportfolio.vercel.app/assets/project12-r35Ns92J.png,
     category: "Web App",
     description: `Supports all currencies with real-time exchange rates. A clean and interactive converter built with EJS and basic APIs.`,
     demoLink: "https://mycurrency-convertor.netlify.app/",
@@ -303,7 +303,7 @@ export const projects = [
   },
   {
     title: "Semester 2 Quiz App",
-    image: project13,
+    image: https://jethroportfolio.vercel.app/assets/project13-BkemRQ1e.png,
     category: "Web App",
     description: `Quiz platform developed to test key concepts learned in semester 2. Built with EJS and JavaScript for fast interaction and clean UI.`,
     demoLink: "https://semester-2-quiz.netlify.app/",
@@ -314,7 +314,7 @@ export const projects = [
   },
   {
     title: "Ecommerce UI Design",
-    image: project14,
+    image: https://jethroportfolio.vercel.app/assets/project14-DMVhYAjB.png,
     category: "UI/UX",
     description: `A visually rich ecommerce interface designed in Figma for online shopping platforms. Focused on clean layouts, modern typography, and intuitive user flow from product view to checkout.`,
     demoLink: "https://www.figma.com/design/klemxcEJQOJXDOynSqZAi5/UI-kit---Ecommerce-Mobile-App--Community-?node-id=244-2&p=f&t=8pHwmsja0sLYZpqN-0",
@@ -324,7 +324,7 @@ export const projects = [
   },
   {
     title: "Text to SVG Generator",
-    image: project15, //you can ask me to generate a 1:1 image too
+    image: https://jethroportfolio.vercel.app/assets/project15-CfhNMo-k.png,
     category: "Tool",
     description: `A simple but handy JavaScript tool that converts text input into clean, scalable SVG graphics. Great for generating web-friendly icons, typography assets, or custom vector designs.`,
     demoLink: "https://github.com/kingjethro999/text-svg",
